@@ -97,8 +97,8 @@ Step 2: Play with machine
 The order is from the left to the right, from above to below.
 Human plays first (x). The machine is 'o' player. Finally, the machine wins.
 
-You can realize that the machine is not extremely intelligent. The main reason is that, in the training phase, we play tic-tac-toe randomly without any human knowledge.
+You can realize that the machine is not extremely intelligent. The main reason is that in the training phase, we play tic-tac-toe randomly without any human knowledge.
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/tic_tac_toe.png" width="450">
 
-The result of this match will be used to train again. That is the meaning of the word 'reinforcement learning'. When we playe more, the machine will be more intelligent.
+The result of this match will be used to train again. That is the meaning of the word 'reinforcement learning'. When we play more, the machine will be more intelligent.
