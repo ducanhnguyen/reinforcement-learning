@@ -57,6 +57,12 @@ When we collect more observations, the distribution of true mean is thinner. You
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/thompson_sampling_10_observations.png" width="650">
 
+#### Summary 
+
+The summary of all methods to solve the problem of expolit-explore dilemma is as follows.
+
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/multi_bandit_comparison.png">
+
 ## 2. Tic-tac-toe game
 
 Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. (wiki)
