@@ -9,7 +9,7 @@ exploit-explore dilemma solution, tic tac toe implementation, etc.
 
 I tested with different values of epsilon, i.e. 0.1, 0.05 and 0.01. The comparison is shown in the figure below. As you can see, the experiment with epsilon = 0.1 converged fastest to the true mean value among three experiments.
 
-After 10^3 iterations, all of experiments converge to around 3.0 which is true mean value.
+After 10^3 iterations, all of experiments converge to around 3.0 which is true mean.
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/epsilon_greedy_comparison.png" width="650">
 
@@ -19,7 +19,9 @@ After 10^3 iterations, all of experiments converge to around 3.0 which is true m
 
 ### Optimistic initial value
 
-<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/oit_comparison_1.png" width="650">
+The below figure shows the comparison among three configuration of optimistic initial value, i.e., upper limit = 10, 100, and 1000. The curve corresponding to upper_limit = 100 converges fastest to true mean.
+
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/oit_comparison.png" width="650">
 
 ### Thompson sampling
 
