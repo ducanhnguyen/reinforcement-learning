@@ -37,7 +37,11 @@ The below figure shows the comparison among three configurations of optimistic i
 
 Gaussian Thompson sampling is used when we need to estimate the distribution of true mean given a set of observations drawn from a gaussian distribution. The larger number of observations, the more exactly the estimation of the true mean is.
 
-Experiment: Assume we know that true mean = 21, standard deviation = 10. We will draw samples from this distribution, then use Thompson sampling to infer the distribution of true mean.
+The figure below is the result when solving the multi-armed bandit problem.
+
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/thompson_sampling_arm.png"  width="650">
+
+*Another experiment*: Assume we know that true mean = 21, standard deviation = 10. We will draw samples from this distribution, then use Thompson sampling to infer the distribution of true mean.
 
 - With 10 observations: mean ~ N(14.452920733576656, 0.008333333333333333) (worse estimation)
 
