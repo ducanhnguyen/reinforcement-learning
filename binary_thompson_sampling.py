@@ -55,4 +55,4 @@ class BinaryThompsonSampling:
 
 if __name__ == '__main__':
     sampling = BinaryThompsonSampling()
-    sampling.fit(true_mean=0.8, N=100)
+    sampling.fit(true_mean=0.8, N=10)

@@ -7,7 +7,7 @@ import numpy as np
 from multi_bandit.bandit import Bandit
 
 
-def run_oit(true_means, n_pull, upper_limit=10):
+def run_oit(true_means, n_pull, upper_limit):
     '''
 
     :param true_means:
@@ -35,11 +35,11 @@ def run_oit(true_means, n_pull, upper_limit=10):
 if __name__ == '__main__':
     N = 100000
 
-    cumulative_average1 = run_oit(true_means=[1, 2, 3], n_pull=N)
+    cumulative_average1 = run_oit(true_means=[1, 2, 3], n_pull=N, upper_limit=100)
 
     plt.plot(np.arange(start=0, stop=N, step=1), cumulative_average1)
     plt.xscale('log')
-    plt.title('Optimistic initial value')
+    plt.title('Optimistic initial value (upper limit = 10)')
     plt.xlabel('Iteration')
     plt.ylabel('sample mean')
     plt.show()
