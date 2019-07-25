@@ -15,7 +15,7 @@ After 10^3 iterations, all of experiments converge to around 3.0 which is true m
 
 ### Upper confidence bound (ucb1)
 
-
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/ucb1.png" width="650">
 
 ### Optimistic initial value
 
@@ -31,9 +31,9 @@ Gaussian thompson sampling is used when we need to estimate the distribution of 
 
 Experiment: true mean = 21, standard deviation = 10
 
-- 10 observations: sample mean ~ N(14.452920733576656, 0.008333333333333333) (worse estimation)
+- 10 observations: mean ~ N(14.452920733576656, 0.008333333333333333) (worse estimation)
 
-- 10000 observations: sample mean ~ N(21.02135557402719, 8.333333333333334e-06) (better estimation)
+- 10000 observations: mean ~ N(21.02135557402719, 8.333333333333334e-06) (better estimation)
 
 #### Binary thompson sampling
 
@@ -44,3 +44,17 @@ When we collect more number of observations, the range of true mean is thinner. 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/thompson_sampling_100_observations.png" width="650">
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/thompson_sampling_10_observations.png" width="650">
+
+## Tic-tac-toe game
+
+Step 1: Train
+- 1.1. Get all possible states
+- 1.2. Initialize value functions of states
+- 1.3. Play automatically under N times (N should be large) to update value functions.
+
+Step 2: Play
+- Rule: Human plays first, the next turn is machine.
+- Strategy: Machine is not allowed to choose random empty cell (of course, because we are making an intelligent machine player). The strategy of machine is to choose a set of possible moves. Each possible move will change the state of board. We have known that each state of the board is associated to a value function. The higher value function of a state means that that state is better and worth playing.
+
+Experiment
+
