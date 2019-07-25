@@ -27,9 +27,20 @@ The below figure shows the comparison among three configuration of optimistic in
 
 #### Gaussian thompson sampling
 
-10 observations: sample mean ~ N(14.452920733576656, 0.008333333333333333)
+Gaussian thompson sampling is used when we need to estimate the distribution of true mean given a number of observation from gaussian distribution. The more number of observations, the more exactly the estimation of true mean is.
 
-10000 observations: sample mean ~ N(21.02135557402719, 8.333333333333334e-06)
+Experiment: true mean = 21, standard deviation = 10
+
+- 10 observations: sample mean ~ N(14.452920733576656, 0.008333333333333333) (worse estimation)
+
+- 10000 observations: sample mean ~ N(21.02135557402719, 8.333333333333334e-06) (better estimation)
 
 #### Binary thompson sampling
 
+Binary thompson sampling is used when we need to estimate the range of true mean given a number of observations from bernoulli distribution. The range of true mean can be interpreted as the distribution of true mean.
+
+When we collect more number of observations, the range of true mean is thinner. You can see the difference in the distribution of true mean in the two figures below.
+
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/thompson_sampling_100_observations.png" width="650">
+
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/thompson_sampling_10_observations.png" width="650">
