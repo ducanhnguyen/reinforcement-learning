@@ -61,7 +61,7 @@ When we collect more observations, the distribution of true mean is thinner. You
 
 The summary of all methods to solve the problem of expolit-explore dilemma is as follows.
 
-<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/multi_bandit_comparison.png">
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/multi_bandit_comparison.png" width="650">
 
 ## 2. Tic-tac-toe game
 
