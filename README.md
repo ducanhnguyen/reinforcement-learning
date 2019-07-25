@@ -7,7 +7,7 @@ exploit-explore dilemma solution, tic tac toe implementation, etc.
 
 The problem of building an intelligent machine to play multi-armed bandit is the exploit-explore dilemma. There are some popular methods to solve the problem of exploit-explore dilemma such as epsilon greedy, upper confidence bound, optimistic initial value, and Thompson sampling.
 
-I tried to implement these methods and test with 3 bandits. Bandit 1 has the true mean of 1. Bandit 2 has the true mean of 2. Bandit 3 has the true mean of 3. 
+I tried to implement these methods and tested with 3 bandits. Bandit 1 has the true mean of 1. Bandit 2 has the true mean of 2. Bandit 3 has the true mean of 3. 
 
 Rule: Player can choose any bandit to pull, then get a reward. Our objective is to maximize the sum of rewards.
 
@@ -35,19 +35,19 @@ The below figure shows the comparison among three configurations of optimistic i
 
 #### Gaussian Thompson sampling
 
-Gaussian Thompson sampling is used when we need to estimate the distribution of true mean given a set of observations from a gaussian distribution. The larger number of observations, the more exactly the estimation of the true mean is.
+Gaussian Thompson sampling is used when we need to estimate the distribution of true mean given a set of observations drawn from a gaussian distribution. The larger number of observations, the more exactly the estimation of the true mean is.
 
-Experiment: true mean = 21, standard deviation = 10
+Experiment: Assume we know that true mean = 21, standard deviation = 10. We will draw samples from this distribution, then use Thompson sampling to infer the distribution of true mean.
 
-- 10 observations: mean ~ N(14.452920733576656, 0.008333333333333333) (worse estimation)
+- With 10 observations: mean ~ N(14.452920733576656, 0.008333333333333333) (worse estimation)
 
-- 10000 observations: mean ~ N(21.02135557402719, 8.333333333333334e-06) (better estimation)
+- With 10000 observations: mean ~ N(21.02135557402719, 8.333333333333334e-06) (better estimation)
 
 #### Binary Thompson sampling
 
-Binary Thompson sampling is used when we need to estimate the range of true mean given a set of observations from Bernoulli distribution. The range of true mean can be interpreted as the distribution of the true mean.
+Binary Thompson sampling is used when we need to estimate the range of true mean given a set of observations drawn from  a Bernoulli distribution. The range of true mean can be interpreted as the distribution of the true mean.
 
-When we collect more observations, the range of true mean is thinner. You can see the difference in the distribution of true mean in the two figures below.
+When we collect more observations, the distribution of true mean is thinner. You can see the difference in the distribution of true mean in the two figures below.
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/thompson_sampling_100_observations.png" width="650">
 
@@ -84,6 +84,10 @@ Step 2: Play with machine
 
 *Experiment*
 
-Human plays first (x). The machine is 'o' player.
+Human plays first (x). The machine is 'o' player. Finally, the machine wins.
+
+You can realize that the machine is not extremely intelligent. The main reason is that, in the training phase, we play tic-tac-toe randomly without any human knowledge.
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/tic_tac_toe.png" width="450">
+
+The result of this match will be used to train again. So, that is the meaning of the word 'reinforcement learning'. We player more, the machine will be more intelligent.
