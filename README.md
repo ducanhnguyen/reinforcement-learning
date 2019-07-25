@@ -51,7 +51,10 @@ The figure below is the result when solving the multi-armed bandit problem.
 
 Binary Thompson sampling is used when we need to estimate the range of true mean given a set of observations drawn from  a Bernoulli distribution. The range of true mean can be interpreted as the distribution of the true mean.
 
-When we collect more observations, the distribution of true mean is thinner. You can see the difference in the distribution of true mean in the two figures below.
+When we collect more observations, the distribution of true mean is thinner. 
+
+
+*Experiment*. This experiment is not related to the problem of multi-armed bandit. This just aims to help you understand more about binary thompson sampling. Let notice the difference of the distribution of true mean in the two figures below to see the importance of the number of observations.
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/thompson_sampling_100_observations.png" width="650">
 
