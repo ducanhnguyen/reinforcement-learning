@@ -101,4 +101,4 @@ You can realize that the machine is not extremely intelligent. The main reason i
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/tic_tac_toe.png" width="450">
 
-The result of this match will be used to train again. So, that is the meaning of the word 'reinforcement learning'. We player more, the machine will be more intelligent.
+The result of this match will be used to train again. That is the meaning of the word 'reinforcement learning'. When we playe more, the machine will be more intelligent.
