@@ -84,6 +84,7 @@ Step 2: Play with machine
 
 *Experiment*
 
+The order is from the left to the right, from above to below.
 Human plays first (x). The machine is 'o' player. Finally, the machine wins.
 
 You can realize that the machine is not extremely intelligent. The main reason is that, in the training phase, we play tic-tac-toe randomly without any human knowledge.
