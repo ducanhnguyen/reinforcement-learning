@@ -35,11 +35,16 @@ def run_oit(true_means, n_pull, upper_limit):
 if __name__ == '__main__':
     N = 100000
 
-    cumulative_average1 = run_oit(true_means=[1, 2, 3], n_pull=N, upper_limit=100)
+    cumulative_average1 = run_oit(true_means=[1, 2, 3], n_pull=N, upper_limit=10)
+    cumulative_average2 = run_oit(true_means=[1, 2, 3], n_pull=N, upper_limit=100)
+    cumulative_average3 = run_oit(true_means=[1, 2, 3], n_pull=N, upper_limit=1000)
 
-    plt.plot(np.arange(start=0, stop=N, step=1), cumulative_average1)
+    plt.plot(np.arange(start=0, stop=N, step=1), cumulative_average1, label = 'upper limit = 10')
+    plt.plot(np.arange(start=0, stop=N, step=1), cumulative_average2, label = 'upper limit = 100')
+    plt.plot(np.arange(start=0, stop=N, step=1), cumulative_average3, label = 'upper limit = 1000')
     plt.xscale('log')
-    plt.title('Optimistic initial value (upper limit = 10)')
+    plt.title('Optimistic initial value')
     plt.xlabel('Iteration')
     plt.ylabel('sample mean')
+    plt.legend()
     plt.show()
