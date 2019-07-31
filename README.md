@@ -121,20 +121,41 @@ I tried to create a simple grid-world in which there are one positive reward (+1
 ### Algorithm
 
 
+
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration.png" width="650">
+
+The algorithm I have used is described below. It is an iterative algorithm (chapter 4.3, page 97, book Reinforcement Learning: An Introduction - Richard S. Sutton and Andrew G. Barto). Each iteration of the algorithm is composed of two steps:
+
+- Step 1. (Policy evaluation or iterative policy iteration): Given a policy, let find the value function V(s)
+
+- Step 2. (Policy improvement): Change the current policy of a state to a better policy.
+
+The algorithm terminates when there is no better policy.
+
 ### Experiment
+
+Initially, there is no action on the table of actions. After 15 iterations of the above algorithm, the best policy has been found.
+
 *Iteration 1*
+
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_1.png" width="450">
 
 *Iteration 2*
+
+Let see the different from this iteration with iteration 1. An action of a state has been changed.
+
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_2.png" width="450">
 
 *Iteration 15 (the last iteration)*
+
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_15.png" width="450">
 
 *The final result*
 
 Table of actions
+
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_actions.png" width="450">
 
 Table of value functions
+
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_value_function.png" width="450">
