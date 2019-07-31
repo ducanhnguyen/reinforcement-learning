@@ -116,11 +116,7 @@ Here is an example of grid-world
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/gird_world_example.png" width="450">
 
-I tried to create a simple grid-world in which there are one positive reward (+1), one negative reward (-1), and one obstacle.
-
-### Algorithm
-
-
+### Algorithm of reinforcement learning
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration.png" width="650">
 
@@ -133,6 +129,10 @@ The algorithm I have used is described below. It is an iterative algorithm (chap
 The algorithm terminates when there is no better policy.
 
 ### Experiment
+
+I tried to create a 4x4 grid-world in which there are one positive reward (+1), one negative reward (-1), and one obstacle denoted by 'x').
+
+The player starts at the state (3, 0). The players must avoid obstacles, eat positive reward, and ignore negative reward.
 
 Initially, there is no action on the table of actions. After 15 iterations of the above algorithm, the best policy has been found.
 
@@ -154,8 +154,10 @@ Let see the different from this iteration with iteration 1. An action of a state
 
 Table of actions
 
-<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_actions.png" width="450">
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_actions.png" width="170">
 
 Table of value functions
 
-<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_value_function.png" width="450">
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_value_function.png" width="190">
+
+Let try yourself with the above result. Remember that player will start at the state (3, 0). Move towards the direction defined in the table of action.
