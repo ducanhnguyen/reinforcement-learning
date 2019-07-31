@@ -1,5 +1,5 @@
 # reinforcement-learning
-exploit-explore dilemma solution, tic tac toe implementation, etc.
+exploit-explore dilemma solution, tic tac toe implementation, grid-world implementation, etc.
 
 ## 1. Exploit-explore dilemma
 
@@ -105,3 +105,36 @@ You can realize that the machine is not extremely intelligent. The main reason i
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/tic_tac_toe.png" width="450">
 
 The result of this match will be used to train again. That is the meaning of the word 'reinforcement learning'. When we play more, the machine will be more intelligent.
+
+## 3. Grid-world game
+
+Grid-world is a MxN board. You act as an player starting at a cell on the board. You must go through cells to collect rewards and avoid obstacles with the least movements and the highest number of rewards.
+
+Method: Use reinforcement learning
+
+Here is an example of grid-world
+
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/gird_world_example.png" width="450">
+
+I tried to create a simple grid-world in which there are one positive reward (+1), one negative reward (-1), and one obstacle.
+
+### Algorithm
+
+
+### Experiment
+*Iteration 1*
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_1.png" width="450">
+
+*Iteration 2*
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_2.png" width="450">
+
+*Iteration 15 (the last iteration)*
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_15.png" width="450">
+
+*The final result*
+
+Table of actions
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_actions.png" width="450">
+
+Table of value functions
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_value_function.png" width="450">
