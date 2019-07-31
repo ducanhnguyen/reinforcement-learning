@@ -108,13 +108,13 @@ The result of this match will be used to train again. That is the meaning of the
 
 ## 3. Grid-world game
 
-Grid-world is a MxN board. You act as an player starting at a cell on the board. You must go through cells to collect rewards and avoid obstacles with the least movements and the highest number of rewards.
+Grid-world is any MxN board. You act as a player starting at a cell on the board. You must go through cells to collect rewards and avoid obstacles with the least movements and the highest number of rewards.
 
 Method: Use reinforcement learning
 
 Here is an example of grid-world
 
-<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/gird_world_example.png" width="450">
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/gird_world_example.png" width="350">
 
 ### Algorithm of reinforcement learning
 
@@ -130,15 +130,15 @@ The algorithm terminates when there is no better policy.
 
 ### Experiment
 
-I tried to create a 4x4 grid-world in which there are one positive reward (+1), one negative reward (-1), and one obstacle denoted by 'x').
+I tried to create a 4x4 grid-world in which there is one positive reward (+1), one negative reward (-1), and one obstacle denoted by 'x').
 
 Rules:
 
-- When player goes into the state (0,3), he receives a reward of (+1) (he wants that)
+- When the player goes into the state (0,3), he receives a reward of (+1) (he wants that)
 
-- When player goes into the state (1,3), he receives a reward of (-1) (this reward is not good, he does not want this reward)
+- When the player goes into the state (1,3), he receives a reward of (-1) (this reward is not good, he does not want this reward)
 
-- The player starts at the state (3, 0). The players must avoid obstacles, eat positive reward, and ignore negative reward.
+- The player starts at the state (3, 0). The player must avoid obstacles, eat positive reward, and ignore negative reward.
 
 Initially, there is no action on the table of actions. After 15 iterations of the above algorithm, the best policy has been found.
 
