@@ -132,7 +132,13 @@ The algorithm terminates when there is no better policy.
 
 I tried to create a 4x4 grid-world in which there are one positive reward (+1), one negative reward (-1), and one obstacle denoted by 'x').
 
-The player starts at the state (3, 0). The players must avoid obstacles, eat positive reward, and ignore negative reward.
+Rules:
+
+- When player goes into the state (0,3), he receives a reward of (+1) (he wants that)
+
+- When player goes into the state (1,3), he receives a reward of (-1) (this reward is not good, he does not want this reward)
+
+- The player starts at the state (3, 0). The players must avoid obstacles, eat positive reward, and ignore negative reward.
 
 Initially, there is no action on the table of actions. After 15 iterations of the above algorithm, the best policy has been found.
 
@@ -160,4 +166,4 @@ Table of value functions
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_value_function.png" width="190">
 
-Let try yourself with the above result. Remember that player will start at the state (3, 0). Move towards the direction defined in the table of action.
+Let try yourself with the above result. Remember that player will start at the state (3, 0). Move towards the direction defined in the table of actions.
