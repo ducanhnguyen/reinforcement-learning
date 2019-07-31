@@ -3,7 +3,7 @@ Given a policy, find V(s) of all states
 '''
 import numpy as np
 
-from grid_wind.board import Board
+from grid_world.board import Board
 
 
 class Policy_Evaluation:

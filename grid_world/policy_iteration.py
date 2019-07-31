@@ -1,6 +1,6 @@
-from grid_wind.board import Board
-from grid_wind.policy_evaluation import Policy_Evaluation
-from grid_wind.policy_improvement import Policy_Improvement
+from grid_world.board import Board
+from grid_world.policy_evaluation import Policy_Evaluation
+from grid_world.policy_improvement import Policy_Improvement
 
 if __name__ == '__main__':
     b = Board()
