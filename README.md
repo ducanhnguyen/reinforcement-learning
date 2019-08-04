@@ -135,7 +135,7 @@ The algorithm terminates when there is no better policy.
 
 Value iteration is an improvement of policy iteration
 
-<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/value_iteration.png" width="650">
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/value-iteration.png" width="580">
 
 ### Experiment
 
