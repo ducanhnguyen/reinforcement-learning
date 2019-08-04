@@ -9,7 +9,8 @@ The problem of building an intelligent machine to play multi-armed bandit is the
 
 I tried to implement these methods and tested with 3 bandits. Bandit 1 has the true mean of 1. Bandit 2 has the true mean of 2. Bandit 3 has the true mean of 3. 
 
-Rule: Player can choose any bandit to pull, then get a reward. Our objective is to maximize the sum of rewards.
+Rule: Player can choose 
+bandit to pull, then get a reward. Our objective is to maximize the sum of rewards.
 
 The experiments are described along with method and as follows.
 
@@ -108,7 +109,7 @@ The result of this match will be used to train again. That is the meaning of the
 
 ## 3. Grid-world game
 
-Grid-world is any MxN board. You act as a player starting at a cell on the board. You must go through cells to collect rewards and avoid obstacles with the least movements and the highest number of rewards.
+Grid-world is a MxN board. You act as a player starting at a cell on the board. You must go through cells to collect rewards and avoid obstacles with the least movements and the highest number of rewards.
 
 Method: Use reinforcement learning
 
@@ -116,7 +117,9 @@ Here is an example of grid-world
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/gird_world_example.png" width="350">
 
-### Algorithm of reinforcement learning
+### Find optimal policy
+
+#### Method 1: Policy iteration
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration.png" width="650">
 
@@ -127,6 +130,12 @@ The algorithm I have used is described below. It is an iterative algorithm (chap
 - Step 2. (Policy improvement): Change the current policy of a state to a better policy.
 
 The algorithm terminates when there is no better policy.
+
+#### Method 2: Value iteration
+
+Value iteration is an improvement of policy iteration
+
+<img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/value_iteration.png" width="650">
 
 ### Experiment
 
@@ -140,23 +149,25 @@ Rules:
 
 - The player starts at the state (3, 0). The player must avoid obstacles, eat positive reward, and ignore negative reward.
 
+Method to find the optimal policy: Policy iteration
+
 Initially, there is no action on the table of actions. After 15 iterations of the above algorithm, the best policy has been found.
 
-*Iteration 1*
+- Iteration 1
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_1.png" width="450">
 
-*Iteration 2*
+- Iteration 2
 
 Let see the different from this iteration with iteration 1. An action of a state has been changed.
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_2.png" width="450">
 
-*Iteration 15 (the last iteration)*
+- Iteration 15 (the last iteration)
 
 <img src="https://github.com/ducanhnguyen/reinforcement-learning/blob/master/img/policy_iteration_15.png" width="450">
 
-*The final result*
+- The final result
 
 Table of actions
 
