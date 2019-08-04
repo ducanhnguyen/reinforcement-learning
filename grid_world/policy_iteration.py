@@ -1,3 +1,8 @@
+'''
+Find the optimal policy.
+
+Method: Policy iteration
+'''
 from grid_world.board import Board
 from grid_world.policy_evaluation import Policy_Evaluation
 from grid_world.policy_improvement import Policy_Improvement
